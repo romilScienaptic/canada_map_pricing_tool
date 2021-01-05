@@ -1,0 +1,119 @@
+.App {
+    text-align: center;
+  }
+  
+  .ant-input[disabled] {
+    color: rgba(0, 0, 0, 0.65) !important;
+    background-color: #fff !important;
+    cursor: not-allowed;
+    opacity: 1;
+    cursor: pointer !important;
+  }
+  .margin-right{
+    margin-right: 60px;
+    margin-left:-10px;
+  }
+  .ant-select-selection{
+    background-color: #0095d9 !important;
+    border-color: #0095d9 !important;
+    color:#fff !important;
+  }
+  
+  /* .ant-select-dropdown{
+    background-color: #0095d9 !important;
+    color: #fff !important;
+    border: 1px solid #0095d9 !important;
+  } */
+  .ant-table-row-selected,.ant-table-row:hover{
+    background-color: #0095d9;
+  }
+  .ant-select-dropdown-menu-item-active, .ant-select-dropdown-menu-item:hover {
+    background-color: #0095d9 !important;
+    color: #fff!important;
+    border: 1px solid #0095d9 !important;
+  }
+  
+  .ant-select-arrow .ant-select-arrow-icon {
+    color:#fff !important;
+  }
+  /* .ant-calendar-picker-icon {
+    display: inline-block;
+    color: #0095d9 !important;
+    font-size: 14px;
+    line-height: 1;
+  } */
+  
+  .title{
+    font-size: 24px;
+    margin-left: 4%;
+    margin-top: 2%;
+  }
+  
+  .ant-table-thead > tr > th{
+    color:#fff !important;
+    background-color: #0095d9 !important;
+  }
+  .ant-btn-primary {
+    color: #fff;
+    background-color: #0095d9 !important;
+    border-color: #0095d9 !important;
+  }
+  .ant-menu-dark .ant-menu-item, .ant-menu-dark .ant-menu-item-group-title, .ant-menu-dark .ant-menu-item > a {
+    color: #000 !important;
+}
+.ant-menu-dark, .ant-menu-dark .ant-menu-sub {
+  color: rgba(255, 255, 255, 0.65);
+  background: #fff !important;
+}
+
+.ant-menu-dark .ant-menu-item:hover, .ant-menu-dark .ant-menu-item-active, .ant-menu-dark .ant-menu-submenu-active, .ant-menu-dark .ant-menu-submenu-open, .ant-menu-dark .ant-menu-submenu-selected, .ant-menu-dark .ant-menu-submenu-title:hover {
+  color: #fff !important;
+  background-color: #0095d9 !important;
+}
+.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  background-color: #0095d9;
+  color: #fff !important;
+}
+
+.ant-btn{
+  border-color:#fff !important;
+  cursor: pointer !important;
+}
+.title{
+    margin-left: -0.5em;
+    color: #A9A9A9;
+    font-size: 16px;
+    font-weight: 600;
+}
+.title2{
+  color: #A9A9A9;
+  font-size: 14px;
+  font-weight: 600;
+}
+.title1{
+    color: #A9A9A9;
+    font-size: 13px;
+    font-weight: 600;
+}
+.ant-divider-horizontal {
+  display: block;
+  clear: both;
+  width: 100%;
+  min-width: 100%;
+  height: 1px;
+  margin-top: 24px !important;
+}
+a{
+  color:#0095d9 !important;
+  font-weight: 600;
+}
+.ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+  padding: 8px 2px !important;
+}
+.ant-table{
+  font-size: 12px !important;
+}
+.rowStyle{
+  /* color:red; */
+}
+

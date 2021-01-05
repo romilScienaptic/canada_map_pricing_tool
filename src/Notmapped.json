@@ -1,0 +1,122 @@
+[
+    {
+        "SKU":"7RQ55UA",
+        "option": "ABA",
+        "product_line":"Ink",
+        "product_description":"KV",
+        "embargo_date":"07/05/2019",
+        "ad_date":"08/05/2019",
+        "derivative_list":"Walmart",
+        "sku_type":"Mainstream"
+    },
+    {
+        "SKU":"ZBY55UA",
+        "option": "DEF",
+        "product_line":"Ink",
+        "product_description":"KV",
+        "embargo_date":"03/05/2019",
+        "ad_date":"06/05/2019",
+        "derivative_list":"Microsoft",
+        "sku_type":"Derivative"
+    },
+    {
+        "SKU":"2BY55FA",
+        "option": "GHI",
+        "product_line":"Scanner",
+        "product_description":"KV",
+        "embargo_date":"12/15/2019",
+        "ad_date":"10/15/2019",
+        "derivative_list":"Amazon",
+        "sku_type":"Mainstream"
+    },
+    {
+        "SKU":"3BY55FA",
+        "option": "ABD",
+        "product_line":"Ink Printer",
+        "product_description":"KV",
+        "embargo_date":"09/15/2019",
+        "ad_date":"12/15/2019",
+        "derivative_list":"Macys",
+        "sku_type":"Derivative"
+    },
+    {
+        "SKU":"7BY55FA",
+        "option": "IJK",
+        "product_line":"Ink",
+        "product_description":"690--0073w",
+        "embargo_date":"09/15/2019",
+        "ad_date":"12/15/2019",
+        "derivative_list":"Macys",
+        "sku_type":"Mainstream"
+    },
+    {
+        "SKU":"1ZY55FA",
+        "option": "KLM",
+        "product_line":"Ink printer",
+        "product_description":"790--0073w",
+        "embargo_date":"04/15/2019",
+        "ad_date":"07/15/2019",
+        "derivative_list":"BJs",
+        "sku_type":"Derivative"
+    },
+    {
+        "SKU":"3EY55FA",
+        "option": "XYZ",
+        "product_line":"Printer",
+        "product_description":"790--0073w",
+        "embargo_date":"04/15/2019",
+        "ad_date":"07/15/2019",
+        "derivative_list":"QVC",
+        "sku_type":"Mainstream"
+    },
+    {
+        "SKU":"9BY55FA",
+        "option": "ABA",
+        "product_line":"Ink Printer",
+        "product_description":"KV",
+        "embargo_date":"09/15/2019",
+        "ad_date":"12/15/2019",
+        "derivative_list":"Macys",
+        "sku_type":"Derivative"
+    },
+    {
+        "SKU":"8BY55FA",
+        "option": "YUI",
+        "product_line":"Ink Printer",
+        "product_description":"KV",
+        "embargo_date":"09/15/2019",
+        "ad_date":"12/15/2019",
+        "derivative_list":"American Eagle",
+        "sku_type":"Mainstream"
+    },
+    {
+        "SKU":"2YY55FA",
+        "option": "ABA",
+        "product_line":"Ink Printer",
+        "product_description":"KV",
+        "embargo_date":"09/15/2019",
+        "ad_date":"12/15/2019",
+        "derivative_list":"Sams",
+        "sku_type":"Derivative"
+    },
+    {
+        "SKU":"1BZ55FA",
+        "option": "NHU",
+        "product_line":"Ink Printer",
+        "product_description":"KV",
+        "embargo_date":"",
+        "ad_date":"",
+        "derivative_list":"Walmart",
+        "sku_type":"Mainstream"
+    },
+    {
+        "SKU":"XCY65HT",
+        "option": "IOP",
+        "product_line":"Scanner",
+        "product_description":"KV",
+        "embargo_date":"09/15/2019",
+        "ad_date":"12/15/2019",
+        "derivative_list":"Walmart",
+        "sku_type":"Derivative"
+    }
+]

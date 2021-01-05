@@ -1,0 +1,122 @@
+[
+    {
+        "contact_type":"Internal",
+        "firstName":"Dale",
+        "lastName":"Rachal",
+        "company":"A & E Enterprises of Louisana LLC",
+        "email":"drachal@gmail.com",
+        "job_title":"Account Manager Lead",
+        "master_life":"Sams,Walmart",
+        "derivative":"Mainstream"
+    },
+    {
+        "contact_type":"Internal",
+        "firstName":"Dan",
+        "lastName":"Kinsely",
+        "company":"Walmart/Sams Club Account Team",
+        "email":"danKinsely@gmail.com",
+        "job_title":"Supplies",
+        "master_life":"Sams,Walmart",
+        "derivative":"Mainstream"
+    },
+    {
+        "contact_type":"Internal",
+        "firstName":"Michelle",
+        "lastName":"Suffton",
+        "company":"Walmart/Sams Club Account Team",
+        "email":"michelle@gmail.com",
+        "job_title":"ACM",
+        "master_life":"BJs,Target",
+        "derivative":"Mainstream"
+    },
+    {
+        "contact_type":"Internal",
+        "firstName":"Kat",
+        "lastName":"Hosp",
+        "company":"Walmart Account Team",
+        "email":"michelle@gmail.com",
+        "job_title":"PCs",
+        "master_life":"BJs,Target",
+        "derivative":"Mainstream"
+    },
+    {
+        "contact_type":"Internal",
+        "firstName":"Scott",
+        "lastName":"Bankroft",
+        "company":"US Print Channel",
+        "email":"scott@gmail.com",
+        "job_title":"PCs",
+        "master_life":"BJs,Target",
+        "derivative":"Mainstream"
+    },
+    {
+        "contact_type":"Internal",
+        "firstName":"Joe",
+        "lastName":"Bieden",
+        "company":"Sams Account Team",
+        "email":"joe@gmail.com",
+        "job_title":"Supplies",
+        "master_life":"Walmart,Target",
+        "derivative":"Mainstream"
+    },
+    {
+        "contact_type":"Internal",
+        "firstName":"Kat",
+        "lastName":"Hosp",
+        "company":"Walmart Account Team",
+        "email":"kat@gmail.com",
+        "job_title":"Print Target",
+        "master_life":"Walmart,Target",
+        "derivative":"Mainstream"
+    },
+    {
+        "contact_type":"Internal",
+        "firstName":"Scott",
+        "lastName":"Bernies",
+        "company":"Walmart Account Team",
+        "email":"scott@gmail.com",
+        "job_title":"Suuplies",
+        "master_life":"Walmart,Target",
+        "derivative":"Mainstream"
+    },
+    {
+        "contact_type":"Internal",
+        "firstName":"Kat",
+        "lastName":"Hosp",
+        "company":"Walmart Account Team",
+        "email":"kat@gmail.com",
+        "job_title":"Print Target",
+        "master_life":"Walmart,Target",
+        "derivative":"Mainstream"
+    },
+    {
+        "contact_type":"Internal",
+        "firstName":"Sharon",
+        "lastName":"Sanderson",
+        "company":"Sams Account Team",
+        "email":"sharon@gmail.com",
+        "job_title":"Print Target",
+        "master_life":"Walmart,Target",
+        "derivative":"Mainstream"
+    },
+    {
+        "contact_type":"External",
+        "firstName":"ABC",
+        "lastName":"DEF",
+        "company":"Sams Account Team",
+        "email":"abc@gmail.com",
+        "job_title":"Print Target",
+        "master_life":"Walmart,Target",
+        "derivative":"Derivative"
+    },
+    {
+        "contact_type":"External",
+        "firstName":"Tom",
+        "lastName":"Sawyer",
+        "company":"Sams Account Team",
+        "email":"tom@gmail.com",
+        "job_title":"Print Target",
+        "master_life":"Walmart",
+        "derivative":"Derivative"
+    }
+]

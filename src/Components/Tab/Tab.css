@@ -1,0 +1,14 @@
+.card-container {
+  margin-left: 40px;
+  margin-top:12px;
+}
+.ant-tabs-tab {
+  font-weight: bolder;
+  color:  rgb(13, 159, 226) !important;
+  background-color:white !important;
+}
+.ant-tabs-tab-active {
+  font-weight: bolder !important;
+  color: white !important;
+  background-color: rgb(13, 159, 226) !important;
+}

@@ -1,0 +1,14 @@
+.ant-select-selection {
+    border-radius: 0px !important;
+    /* height: 41px !important; */
+    background-color: #0093D3;
+}
+
+.ant-select-selection__placeholder {
+    position: absolute !important;
+    top: 20px;
+}
+.ant-select-selection__placeholder {
+    position: absolute !important;
+    top: 15px !important;
+}
