@@ -2,7 +2,7 @@ import React from "react";
 import "./home.css";
 import "antd/dist/antd.css";
 import Tab from "../../Components/Tab/Tab";
-import { Table, Input, Col, Form, Button, Icon, Row, Modal, Tooltip, Divider, InputNumber, message } from "antd";
+import { Table, Input, Col, Form, Button, Icon, Row, Modal, Tooltip, Divider, InputNumber, message,Alert } from "antd";
 import Dropdown from '../../Components/Select/select';
 import DropdownProduct from '../../Components/DropdownProduct/DropdownPro';
 import Download from '../../Components/Download/csvDownload';
@@ -109,7 +109,7 @@ class EditableTable extends React.Component {
       product_description: '',
       price: '',
       price1: '',
-      downloadFolderName:'Current-hp-sku-filter.csv',
+      downloadFolderName: 'Current-hp-sku-filter.csv',
       productfilter: '',
       optionfilter: '',
       filterDerivative: '',
@@ -136,7 +136,9 @@ class EditableTable extends React.Component {
       void_record: [],
       border: '',
       borderRadius: '1px',
-      validMessage: ""
+      validMessage: "",
+      isPriceChanged: false,
+      showError: false,
     };
     this.columns = [
       {
@@ -205,14 +207,14 @@ class EditableTable extends React.Component {
         render: text => <label style={{ cursor: "pointer" }}>{text}</label>
       },
       {
-        title: 'MAP Price',
+        title: 'Current MAP Price',
         dataIndex: 'map_price',
         key: 'map_price',
         // ...this.getColumnSearchProps('MAP Price'),
         render: text => <label style={{ cursor: "pointer" }}>{text}</label>
       },
       {
-        title: 'New MAP Price',
+        title: 'Future MAP Price',
         dataIndex: 'new_map_price',
         key: 'new_map_price',
         // ...this.getColumnSearchProps('MAP Price'),
@@ -246,7 +248,7 @@ class EditableTable extends React.Component {
   componentDidMount() {
     let dataPacket = [];
     const dropdownData = ["MAP"];
-    const tier = ["Tier D (Supplies)"];
+    const tier = ["Tier D (Supplies)","Tier B (Printers)"];
     const skuType = ["Mainstream", "Derivative"];
     const recordData = ["Yes", "No"];
 
@@ -492,6 +494,16 @@ class EditableTable extends React.Component {
       })
     }
     else if (event.target.id === "price") {
+      if(this.state.currentPrice != event.target.value){
+        this.setState({
+          isPriceChanged:true,
+        })
+      }
+      if(this.state.currentPrice == event.target.value){
+        this.setState({
+          isPriceChanged:false,
+        })
+      }
       this.setState({
         price: event.target.value
       })
@@ -576,7 +588,9 @@ class EditableTable extends React.Component {
     }
   }
 
-
+  handleClose = () => {
+    this.setState({ showError: false });
+  };
 
   handleOk = () => {
     // console.log(record);
@@ -669,6 +683,12 @@ class EditableTable extends React.Component {
   }
 
   handleUpdate = () => {
+    if(this.state.isPriceChanged == true && this.state.priceDate == ''){
+       this.setState({
+         showError:true,
+       })
+    }
+    else{
     if (this.state.recordValue === "No") {
       this.setState({
         dataRecevied: false
@@ -700,7 +720,8 @@ class EditableTable extends React.Component {
               "ad_embargo_date": this.state.adDate,
               "map_price": record.map_price,
               "price_change_date": this.state.priceDate,
-              "new_map_price": this.state.price.length === 0 ? record.map_price : this.state.price,
+              // "new_map_price": this.state.price.length === 0 ? record.map_price : this.state.price,
+              "new_map_price": this.state.price,
               "off_map_date": this.state.policyDate === "" ? record.off_map_date : this.state.policyDate,
               "policy": this.state.policyValue,
               "product_category": record.product_category,
@@ -752,7 +773,8 @@ class EditableTable extends React.Component {
               "ad_embargo_date": this.state.adDate,
               "map_price": record.map_price,
               "price_change_date": this.state.priceDate,
-              "new_map_price": this.state.price.length === 0 ? record.map_price : this.state.price,
+             // "new_map_price": this.state.price.length === 0 ? record.map_price : this.state.price,
+             "new_map_price": this.state.price,
               "off_map_date": this.state.policyDate === "" ? record.off_map_date : this.state.policyDate,
               "policy": this.state.policyValue,
               "product_category": record.product_category,
@@ -803,7 +825,8 @@ class EditableTable extends React.Component {
               "ad_embargo_date": this.state.adDate,
               "map_price": record.map_price,
               "price_change_date": this.state.priceDate,
-              "new_map_price": this.state.price.length === 0 ? record.map_price : this.state.price,
+             // "new_map_price": this.state.price.length === 0 ? record.map_price : this.state.price,
+             "new_map_price": this.state.price,
               "off_map_date": this.state.policyDate === "" ? record.off_map_date : this.state.policyDate,
               "policy": this.state.policyValue,
               "product_category": record.product_category,
@@ -853,7 +876,8 @@ class EditableTable extends React.Component {
               "ad_embargo_date": this.state.adDate,
               "map_price": record.map_price,
               "price_change_date": this.state.priceDate,
-              "new_map_price": this.state.price.length === 0 ? record.map_price : this.state.price,
+             // "new_map_price": this.state.price.length === 0 ? record.map_price : this.state.price,
+             "new_map_price": this.state.price,
               "off_map_date": this.state.policyDate === "" ? record.off_map_date : this.state.policyDate,
               "policy": this.state.policyValue,
               "product_category": record.product_category,
@@ -896,6 +920,7 @@ class EditableTable extends React.Component {
       })
     }
   }
+}
 
   handleDelete = () => {
     this.setState({
@@ -1259,6 +1284,7 @@ class EditableTable extends React.Component {
     }
 
     let rowIndex = (recordData) => {
+      console.log('recordData',recordData);
       record = recordData;
       if (record.sku_type === "Derivative") {
         if (record["off_map_date"] !== undefined) {
@@ -1277,7 +1303,10 @@ class EditableTable extends React.Component {
             product_description: record.product_description,
             skuValue: record.sku_type,
             derivativeRecord: record.derivative_list,
-            showFlag: 'block'
+            showFlag: 'block',
+            currentPrice:record.new_map_price,
+            isPriceChanged:false,
+            showError:false,
           }, () => defaultValue())
         }
         else {
@@ -1296,7 +1325,10 @@ class EditableTable extends React.Component {
             product_description: record.product_description,
             skuValue: record.sku_type,
             derivativeRecord: record.derivative_list,
-            showFlag: 'block'
+            showFlag: 'block',
+            currentPrice:record.new_map_price,
+            isPriceChanged:false,
+            showError:false,
           }, () => defaultValue())
         }
 
@@ -1319,7 +1351,10 @@ class EditableTable extends React.Component {
             product_description: record.product_description,
             skuValue: record.sku_type,
             derivativeRecord: record.derivative_list,
-            showFlag: 'none'
+            showFlag: 'none',
+            currentPrice:record.new_map_price,
+            isPriceChanged:false,
+            showError:false,
           })
         }
         else {
@@ -1339,7 +1374,10 @@ class EditableTable extends React.Component {
             product_description: record.product_description,
             skuValue: record.sku_type,
             derivativeRecord: record.derivative_list,
-            showFlag: 'none'
+            showFlag: 'none',
+            currentPrice:record.new_map_price,
+            isPriceChanged:false,
+            showError:false,
           })
         }
 
@@ -1393,7 +1431,7 @@ class EditableTable extends React.Component {
                 <Col span={2}><Input style={{ marginTop: "-1em", marginLeft: "-0.5em" }} allowClear id="filterOption" onChange={this.text} value={this.state.optionfilter}></Input></Col>
 
                 <Col span={4}><label className="title1" style={{ marginLeft: "1em" }}>Product Category</label></Col>
-                <Col span={2} style={{ marginTop: "-0.5em", marginLeft: "-4.5em" }}><DropdownProduct  placeholder={"Select Product Category..."} select={this.select} value={this.state.product_category} id="productCategory" /></Col>
+                <Col span={2} style={{ marginTop: "-0.5em", marginLeft: "-4.5em" }}><DropdownProduct placeholder={"Select Product Category..."} select={this.select} value={this.state.product_category} id="productCategory" /></Col>
 
                 <Col span={1}></Col>
                 <Col span={2}><label className="title1">SKU Type</label></Col>
@@ -1471,6 +1509,7 @@ class EditableTable extends React.Component {
             </Button>,
             ]}>
             <div style={{ overflow: "auto" }}>
+             {this.state.showError ?  <Alert message="Please select Price Effective Date" type="error" closable afterClose={this.handleClose}/>:null} 
               <Col span={24}>
                 <label className="title2">Current HP SKU Price List</label>
               </Col>
@@ -1517,7 +1556,8 @@ class EditableTable extends React.Component {
                 </Col>
                 <br /> <br />
                 <Col span={24} style={{ marginTop: "0.5em" }}>
-                  <Col span={4}><label className="title1">Price Effective Date</label></Col>
+                  {this.state.isPriceChanged ? <Col span={4}><label className="title1">Price Effective Date<span style={{ color: "red" }}>*</span></label></Col> :
+                    <Col span={4}><label className="title1">Price Effective Date</label></Col>}
                   <Col span={4}><Datepicker defaultVal={true} action={this.dateSelect} placeholder="Select Date" defaultValue={record["price_change_date"]} width={154} id={"price_date"} value={this.state.priceDate} /></Col>
                   <Col span={3}></Col>
                   <Col span={4}><label className="title1">Off Policy Date</label></Col>
@@ -1525,7 +1565,7 @@ class EditableTable extends React.Component {
                 </Col>
                 <br /><br />
                 <Col span={24} style={{ marginTop: "0.5em" }}>
-                  <Col span={4}><label className="title1">Price<span style={{ color: "red" }}>*</span></label></Col>
+                  <Col span={4}><label className="title1">Price</label></Col>
                   <Col span={5}><Input allowClear type="text" onChange={this.text} style={{ width: "105%", border: this.state.border }} id="price" value={this.state.price} /></Col>
                   <Col span={2}></Col>
                   <Col span={4}><label className="title1">UPC</label></Col>

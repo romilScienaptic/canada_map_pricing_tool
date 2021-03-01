@@ -290,7 +290,7 @@ class EditableTable extends React.Component {
         render: text => <label style={{ cursor: "pointer" }}>{text}</label>
       },
       {
-        title: 'MAP Price',
+        title: 'Current MAP Price',
         dataIndex: 'map_price',
         key: 'map_price',
         width: 80,
@@ -808,13 +808,13 @@ class EditableTable extends React.Component {
           <Col span={1}></Col>
           ` <Col span={10}>
             <label className="title1">Internet Embargo Ad Date</label>
-            <Datepicker id="embargo_date" defaultVal={false} width={230} action={this.pickDate} value={this.state.embargo_date} />
+            <Datepicker id="embargo_date" defaultVal={false} width={230} action={this.pickDate} format={'MM/DD/YYYY'} value={this.state.embargo_date} />
             {/* <Datepicker action={this.pickDate} defaultVal={false} placeholder="Select Date" id={"embargo_date"} value={this.state.embargo_date} /> */}
           </Col>
           <Col span={1}></Col>
           <Col span={10}>
             <label className="title1">Ad Embargo Date</label>
-            <Datepicker id="ad_date" defaultVal={false} width={230} action={this.pickDate} placeholder="Select Date" value={this.state.ad_date} />
+            <Datepicker id="ad_date" defaultVal={false} width={230} action={this.pickDate} placeholder="Select Date" format={'MM/DD/YYYY'} value={this.state.ad_date} />
           </Col>
         </Col><br /><br /><br /><br />
         <Col span={24} style={{ marginTop: "-1.5em" }}>
@@ -1174,15 +1174,15 @@ class EditableTable extends React.Component {
                 <br /> <br />
                 <Col span={24} style={{ marginTop: "0.5em" }}>
                   <Col span={4} style={{ marginTop: "-0.5em" }}><label className="title1"><span style={{ color: "red" }}>*</span>Internet Ad Embargo Date</label></Col>
-                  <Col span={4}><Datepicker action={this.dateSelect} width={154} validate={this.state.border} borderRadius={this.state.borderRadius} id={"internet_date"} defaultVal={false} value={this.state.internetDate} defaultValue={this.state.internetDate} /></Col>
+                  <Col span={4}><Datepicker action={this.dateSelect} width={154} validate={this.state.border} borderRadius={this.state.borderRadius} id={"internet_date"} defaultVal={false} value={this.state.internetDate} format={'MM/DD/YYYY'} defaultValue={this.state.internetDate} /></Col>
                   <Col span={3}></Col>
                   <Col span={4}><label className="title1"><span style={{ color: "red" }}>*</span>Ad Embargo Date</label></Col>
-                  <Col span={4}><Datepicker action={this.dateSelect} width={154} validate={this.state.border} id={"ad_date"} borderRadius={this.state.borderRadius} defaultVal={false} value={this.state.adDate} defaultValue={this.state.adDate} /></Col>
+                  <Col span={4}><Datepicker action={this.dateSelect} width={154} validate={this.state.border} id={"ad_date"} borderRadius={this.state.borderRadius} defaultVal={false} value={this.state.adDate} format={'MM/DD/YYYY'} defaultValue={this.state.adDate} /></Col>
                 </Col>
                 <br /> <br />
                 <Col span={24} style={{ marginTop: "0.5em" }}>
                   <Col span={4}><label className="title1"><span style={{ color: "red" }}>*</span>Price Change Date</label></Col>
-                  <Col span={4}><Datepicker action={this.dateSelect} width={154} validate={this.state.border} id={"price_date"} borderRadius={this.state.borderRadius} defaultVal={false} value={this.state.priceDate} defaultValue={this.state.priceDate} /></Col>
+                  <Col span={4}><Datepicker action={this.dateSelect} width={154} validate={this.state.border} id={"price_date"} borderRadius={this.state.borderRadius} defaultVal={false} value={this.state.priceDate} format={'MM/DD/YYYY'} defaultValue={this.state.priceDate} /></Col>
                   {/* <Col span={3}></Col>
                   <Col span={4}><label className="title1">Off Policy Date</label></Col>
                   <Col span={4}><Datepicker action={this.dateSelect} width={154} id={"policy_date"} defaultVal={false} value={this.state.policyDate} defaultValue={this.state.policyDate} /></Col> */}
@@ -1229,13 +1229,13 @@ class EditableTable extends React.Component {
                 <Col span={1}></Col>
                 ` <Col span={10}>
                   <label className="title1">Internet Embargo Ad Date</label>
-                  <Datepicker id="embargo_date" defaultVal={false} width={230} action={this.pickDate} value={this.state.embargo_date} defaultValue={this.state.embargo_date} />
+                  <Datepicker id="embargo_date" defaultVal={false} width={230} action={this.pickDate} value={this.state.embargo_date} format={'MM/DD/YYYY'} defaultValue={this.state.embargo_date} />
                   {/* <Datepicker action={this.pickDate} defaultVal={false} placeholder="Select Date" id={"embargo_date"} value={this.state.embargo_date} /> */}
                 </Col>
                 <Col span={1}></Col>
                 <Col span={10}>
                   <label className="title1">Ad Embargo Date</label>
-                  <Datepicker id="ad_date" defaultVal={false} width={230} action={this.pickDate} placeholder="Select Date" value={this.state.ad_date} defaultValue={this.state.ad_date} />
+                  <Datepicker id="ad_date" defaultVal={false} width={230} action={this.pickDate} placeholder="Select Date" value={this.state.ad_date} format={'MM/DD/YYYY'}defaultValue={this.state.ad_date} />
                 </Col>
               </Col><br /><br /><br /><br />
               <Col span={24} style={{ marginTop: "-1.2em" }}>

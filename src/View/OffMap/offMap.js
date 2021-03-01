@@ -120,16 +120,16 @@ class offMap extends React.Component {
         // ...this.getColumnSearchProps('Ad Embargo Date'),
         render: text =><label style={{cursor:"pointer"}}>{text}</label>
       },
+      // {
+      //   title: 'Current MAP Price',
+      //   dataIndex: 'map_price',
+      //   key: 'map_price',
+      //   // ...this.getColumnSearchProps('MAP Price'),
+      //   render: text =><label style={{cursor:"pointer"}}>{text}</label>
+      // },
       {
-        title: 'MAP Price',
-        dataIndex: 'map_price',
-        key: 'map_price',
-        // ...this.getColumnSearchProps('MAP Price'),
-        render: text =><label style={{cursor:"pointer"}}>{text}</label>
-      },
-      {
-        title: 'Price Change Date',
-        dataIndex: 'price_change_date',
+        title: 'Off MAP Date',  // title: 'Price Change Date', -> kit
+        dataIndex: 'off_map_date',// dataIndex:price_change_date,-> kit
         key: 'price_change_date',
         // ...this.getColumnSearchProps('Price Change Date'),
         render: text =><label style={{cursor:"pointer"}}>{text}</label>

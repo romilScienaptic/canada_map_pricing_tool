@@ -33,8 +33,8 @@ class Datepicker extends React.Component{
     }
     render(){
         return(this.props.defaultVal === false ?
-            (<DatePicker id={this.props.id}  onChange={this.onChange} format={dateFormat} size={this.state.size}  style={{width:this.props.width,border:this.props.validate, borderRadius:this.props.borderRadius}} value={this.state.val !== "" ? moment(this.state.val) : null}/>)
-            :(<DatePicker id={this.props.id} onChange={this.onChange} format={dateFormat} size={this.state.size}   style={{width:this.props.width,border:this.props.validate, borderRadius:this.props.borderRadius}} value={this.state.val !== "" && this.state.val !== undefined ? moment(this.state.val) : null}/>)
+            (<DatePicker allowClear id={this.props.id}  onChange={this.onChange} format={dateFormat} size={this.state.size}  style={{width:this.props.width,border:this.props.validate, borderRadius:this.props.borderRadius}} value={this.state.val !== "" ? moment(this.state.val) : null}/>)
+            :(<DatePicker allowClear id={this.props.id} onChange={this.onChange} format={dateFormat} size={this.state.size}   style={{width:this.props.width,border:this.props.validate, borderRadius:this.props.borderRadius}} value={this.state.val !== "" && this.state.val !== undefined ? moment(this.state.val) : null}/>)
         );
     }
 }

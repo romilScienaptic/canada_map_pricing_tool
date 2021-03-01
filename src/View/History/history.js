@@ -197,7 +197,7 @@ class EditableTable extends React.Component {
         render: text => <label style={{ cursor: "pointer" }}>{text}</label>
       },
       {
-        title: 'MAP Price',
+        title: 'Current MAP Price',
         dataIndex: 'map_price',
         key: 'map_price',
         // ...this.getColumnSearchProps('MAP Price'),

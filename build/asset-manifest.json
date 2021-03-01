@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "./static/css/main.05d324a6.chunk.css",
+    "main.js": "./static/js/main.b14df622.chunk.js",
+    "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
+    "static/css/2.6af0a98b.chunk.css": "./static/css/2.6af0a98b.chunk.css",
+    "static/js/2.0955faa2.chunk.js": "./static/js/2.0955faa2.chunk.js",
+    "index.html": "./index.html",
+    "precache-manifest.9d2be2d670c51ca3506d042cd619754f.js": "./precache-manifest.9d2be2d670c51ca3506d042cd619754f.js",
+    "service-worker.js": "./service-worker.js",
+    "static/media/Hp.png": "./static/media/Hp.aee7ce1a.png",
+    "static/media/index.css": "./static/media/hpsimplified_lt-webfont.dbd791b7.ttf"
+  }
+}
